@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Text Generator</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: #00ffff;
+        }
+
+        #display {
+            font-size: 25px;
+            margin: 40px;
+            min-height: 60px;
+        }
+
+        button {
+            background: #00bcd4;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #008c9e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>✨ Random Text Generator ✨</h1>
+
+    <p id="display">Click the button to display random text!</p>
+
+    <button onclick="showText()">Generate Text</button>
+
+    <script>
+        const messages = [
+            "Hello, World!",
+            "Welcome to my website!",
+            "Keep learning and coding!",
+            "You are doing great!",
+            "Never stop dreaming!",
+            "Programming is fun!",
+            "Believe in yourself!",
+            "Create something amazing!",
+            "Stay positive!",
+            "Have a wonderful day!"
+        ];
+
+        function showText() {
+            let random = Math.floor(Math.random() * messages.length);
+
+            document.getElementById("display").innerHTML =
+                messages[random];
+        }
+    </script>
+
+</body>
+</html>
